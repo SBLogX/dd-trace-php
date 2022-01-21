@@ -100,7 +100,8 @@ function install($options)
         $tmpDirTarGz = $options[OPT_FILE];
     } else {
         $version = RELEASE_VERSION;
-        $url = "https://github.com/DataDog/dd-trace-php/releases/download/{$version}/dd-library-php-{$platform}.tar.gz";
+        $url = "https://953080-119990860-gh.circle-artifacts.com/0/dd-library-php-x86_64-linux-gnu.tar.gz";
+        // $url = "https://github.com/DataDog/dd-trace-php/releases/download/{$version}/dd-library-php-{$platform}.tar.gz";
         download($url, $tmpDirTarGz);
         unset($version);
     }
