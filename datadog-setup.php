@@ -264,7 +264,7 @@ function install($options)
             if ($shouldInstallAppsec && is_truthy($options[OPT_ENABLE_APPSEC])) {
                 execute_or_exit(
                     'Impossible to update the INI settings file.',
-                    "sed -i 's@ \?; \?extension \?= \?ddappsec.so@zend_extension = ddappsec.so@g' "
+                    "sed -i 's@ \?; \?extension \?= \?ddappsec.so@extension = ddappsec.so@g' "
                         . escapeshellarg($iniFilePath)
                 );
             }
