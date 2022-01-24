@@ -12,6 +12,7 @@ use DDTrace\Integrations\Laravel\LaravelIntegration;
 use DDTrace\Integrations\Lumen\LumenIntegration;
 use DDTrace\Integrations\Memcached\MemcachedIntegration;
 use DDTrace\Integrations\Mongo\MongoIntegration;
+use DDTrace\Integrations\MongoDB\MongoDBIntegration;
 use DDTrace\Integrations\Mysqli\MysqliIntegration;
 use DDTrace\Integrations\Nette\NetteIntegration;
 use DDTrace\Integrations\PDO\PDOIntegration;
@@ -95,6 +96,8 @@ class IntegrationsLoader
             '\DDTrace\Integrations\Lumen\LumenIntegration';
         $this->integrations[MongoIntegration::NAME] =
             '\DDTrace\Integrations\Mongo\MongoIntegration';
+        $this->integrations[MongoDBIntegration::NAME] =
+            '\DDTrace\Integrations\MongoDB\MongoDBIntegration';
         $this->integrations[MysqliIntegration::NAME] =
             '\DDTrace\Integrations\Mysqli\MysqliIntegration';
         $this->integrations[SymfonyIntegration::NAME] =
